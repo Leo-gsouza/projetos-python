@@ -16,7 +16,7 @@ while opcao != 3:
             print (" ")
             
         else:
-            print ("ERRO NO SISTEMA = Não são permitidos valores negativos")
+            print ("FALHA NA OPERAÇÃO = Não são permitidos valores negativos")
             print (" ")
 
     elif opcao == 2:        
@@ -30,24 +30,28 @@ while opcao != 3:
                         extrato += f"\nSaque: R${saque:.2f}"
                         print(" ")
                     else:
-                        print("Excedeu o limite de 3 saques")
+                        print("FALHA NA OPERAÇÃO = Excedeu o limite de 3 saques")
                         print(" ")
                 else:
-                    print("O limite de saque é R$500")
+                    print("FALHA NA OPERAÇÃO = Limite de saque: R$500")
                     print(" ")
             else:
-                print("ERRO DE SISTEMA = Não são permitidos valores negativos")
+                print("FALHA NA OPERAÇÃO = Não são permitidos valores negativos")
                 print(" ")
         else:
-            print("Saldo insuficiente!")
+            print("FALHA NA OPERAÇÃO = Saldo insuficiente!")
             print(" ")
 
     elif opcao == 3:
         print(" ")
-        print("EXTRATO".center(29,"▬"))
+        print(" EXTRATO ".center(35,"▬"))
         print("\nSem movimentações" if not extrato else extrato)
         print(f"\nSaldo: R${saldo:.2f}")
-        print("▬".center(29,"▬"))
+        print("▬".center(35,"▬"))
+
+    else:
+        print("operação invalida")
+        print(" ")
 
 
-print ("Obrigado por sua visita")
+print ("Obrigado por sua visita ☺ ")
