@@ -3,13 +3,13 @@ limite = 0
 opcao = 0
 extrato = ""
 
-while opcao != 3:
+while opcao != 4:
     print ("[1]DEPOSITAR\n[2]SACAR\n[3]EXTRATO\n[4]SAIR")
     opcao = int(input("Digite o número da operação: "))
     print (" ")
 
     if opcao == 1:
-        deposito = int(input("Valor de deposito: R$"))
+        deposito = float(input("Valor de deposito: R$"))
         if deposito > 0:
             saldo += deposito  
             extrato += f"\nDeposito: R${deposito:.2f}"
@@ -20,7 +20,7 @@ while opcao != 3:
             print (" ")
 
     elif opcao == 2:        
-        saque = int(input("Valor de saque: R$"))
+        saque = float(input("Valor de saque: R$"))
         if saque < saldo:
             if saque > 0:
                 if saque <= 500:
