@@ -3,7 +3,7 @@ limite = 0
 opcao = 0
 extrato = ""
 
-while opcao != 4:
+while True:
     print ("[1]DEPOSITAR\n[2]SACAR\n[3]EXTRATO\n[4]SAIR")
     opcao = int(input("Digite o número da operação: "))
     print (" ")
@@ -48,8 +48,17 @@ while opcao != 4:
         print("\nSem movimentações" if not extrato else extrato)
         print(f"\nSaldo: R${saldo:.2f}")
         print("▬".center(35,"▬"))
+        print(" ")
 
-    else:
+    elif opcao == 4:
+        confirmar_sair = int(input("Tem certeza que deseja sair?\n[1]Sair  [2]Continuar:  "))
+        if confirmar_sair == 1:
+            print(" ")
+            break
+        else:
+            print(" ")
+
+    else: 
         print("operação invalida")
         print(" ")
 
